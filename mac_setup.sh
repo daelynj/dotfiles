@@ -5,3 +5,4 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 brew install postgres
 /usr/local/opt/postgresql/bin/postgres -D /usr/local/var/postgres
 brew install pgcli 
+brew install fzy
