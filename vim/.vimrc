@@ -1,6 +1,9 @@
 " this is redundant, but prefer explicit settings over implicit
 set nocompatible
 
+" disable insert line since we have lightline
+set noshowmode
+
 " Basic syntax highlighting
 syntax on
 
@@ -60,6 +63,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-commentary'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'itchyny/lightline.vim'
 Plugin 'itchyny/vim-gitbranch'
 
@@ -69,12 +73,11 @@ filetype plugin indent on
 autocmd vimenter * ++nested colorscheme gruvbox
 
 let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
+    \   'right': [['lineinfo']],
+    \ },
+    \ 'component_function': {
+    \ 'gitbranch': 'gitbranch#name'   
+    \ },
+    \ }
