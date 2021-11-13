@@ -50,3 +50,12 @@ nnoremap <leader>e :call FzyCommand("find . -type f", ":e")<cr>
 nnoremap <leader>v :call FzyCommand("find . -type f", ":vs")<cr>
 nnoremap <leader>s :call FzyCommand("find . -type f", ":sp")<cr>
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
+filetype plugin indent on
