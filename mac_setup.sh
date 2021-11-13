@@ -16,3 +16,5 @@ brew install postgres
 brew install pgcli 
 
 brew install fzy
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
