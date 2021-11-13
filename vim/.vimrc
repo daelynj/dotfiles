@@ -56,6 +56,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
+
+autocmd vimenter * ++nested colorscheme gruvbox
