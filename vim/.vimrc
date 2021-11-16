@@ -23,6 +23,9 @@ set tabstop=2
 set relativenumber
 set rnu
 
+" Fixes IntelliJ built-in terminal colors
+set background=dark
+
 " Disable arrow keys
 noremap! <Up> <NOP>
 noremap <Up> <NOP>
