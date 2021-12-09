@@ -51,6 +51,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -70,3 +72,6 @@ let g:lightline = {
 set t_Co=256
 
 nnoremap <leader>e :FZF<CR>
+
+" noh - no highlight
+map <esc> :noh <CR>
