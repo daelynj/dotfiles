@@ -4,7 +4,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/daelynjones/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -13,6 +14,8 @@ export ZSH="/Users/daelynjones/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 KEYTIMEOUT=1
+
+alias cbr="cargo build && cargo run"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias python="/usr/bin/python3.10"
 
 # Add vim keybinds to terminal
 bindkey -v
