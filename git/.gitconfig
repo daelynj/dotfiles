@@ -2,9 +2,11 @@
 [user]
 # Please adapt and uncomment the following lines:
 name = Daelyn Jones
-email = daelyndbjones@gmail.com 
+email = daelyn@seam.io 
 [core]
 	editor = vim
   pager = less -+FX
 [pull]
 	rebase = true
+[push]
+	autoSetupRemote = true

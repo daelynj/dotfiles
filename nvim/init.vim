@@ -20,8 +20,9 @@ set shiftwidth=2
 set tabstop=2
 
 " Relative line numbers
-set relativenumber
-set rnu
+" set relativenumber
+" set rnu
+set nu
 
 " Fixes IntelliJ built-in terminal colors
 set background=dark
@@ -87,5 +88,3 @@ nnoremap <leader>e :FZF<CR>
 " noh - no highlight
 map <esc> :noh <CR>
 
-lua require('auto_complete')
-lua require('lsp_config')
