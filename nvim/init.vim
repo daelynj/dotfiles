@@ -55,18 +55,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-
-Plug 'simrat39/rust-tools.nvim'
-Plug 'rust-lang/rust.vim'
-
 call plug#end()
-
-let g:rustfmt_autosave = 1
 
 filetype plugin indent on
 

@@ -1,9 +1,5 @@
-export SL_HOST="http://localhost:8080"
-
 alias python=python3
 alias pip=pip3
-
-alias age="~/Seam/age.sh"
 
 alias gcan="gc --amend --no-edit"
 alias gref="git reflog"
