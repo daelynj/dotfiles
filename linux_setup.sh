@@ -22,3 +22,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 sudo apt install fzy
 
 sudo apt install fd-find
+
+touch ~/.Xmodmap
+
+echo -e "clear Lock\nkeycode 66 = Escape" > ~/.Xmodmap
