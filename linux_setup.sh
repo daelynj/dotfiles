@@ -26,3 +26,9 @@ sudo apt install fd-find
 touch ~/.Xmodmap
 
 echo -e "clear Lock\nkeycode 66 = Escape" > ~/.Xmodmap
+
+mkdir /tmp/screenshots
+
+cp scr /home/daelyn/.local/bin/scr
+
+cp code/keybindings.json ~/.config/Code/User

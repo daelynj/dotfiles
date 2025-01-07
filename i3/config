@@ -40,7 +40,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym --release $mod+End exec --no-startup-id "/home/daelyn/.local/bin/scr"
+bindsym --release $mod+Home exec --no-startup-id "/home/daelyn/.local/bin/scr"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -192,3 +192,39 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+exec xmodmap ~/.Xmodmap
+exec --no-startup-id picom --experimental-backend --config ~/.config/picom.conf
+
+# Define workspaces
+set $ws1 "1: IntelliJ"
+set $ws2 "2: VS Code"
+set $ws3 "3: Alacritty"
+# set $ws4 "4: Empty"
+set $ws5 "5: Brave"
+set $ws6 "6: Keybase"
+
+# Assign applications to workspaces
+assign [class="jetbrains-idea-ce"] $ws1
+assign [class="code"] $ws2
+assign [class="alacritty"] $ws3
+assign [class="brave-browser"] $ws5
+assign [class="discord"] $ws6
+assign [class="keybase"] $ws6
+
+# Apply layouts
+exec --no-startup-id i3-msg "workspace $ws1; append_layout ~/.config/i3/workspace_1.json"
+exec --no-startup-id i3-msg "workspace $ws2; append_layout ~/.config/i3/workspace_2.json"
+exec --no-startup-id i3-msg "workspace $ws3; append_layout ~/.config/i3/workspace_3.json"
+exec --no-startup-id i3-msg "workspace $ws5; append_layout ~/.config/i3/workspace_5.json"
+exec --no-startup-id i3-msg "workspace $ws6; append_layout ~/.config/i3/workspace_6.json"
+
+# Auto-start applications
+exec --no-startup-id intellij
+exec --no-startup-id code
+exec --no-startup-id alacritty
+exec --no-startup-id brave-browser
+exec --no-startup-id discord
+exec --no-startup-id run_keybase
+
+exec mkdir /tmp/screenshots

@@ -1,6 +1,3 @@
-" this is redundant, but prefer explicit settings over implicit
-set nocompatible
-
 " disable insert line since we have lightline
 set noshowmode
 
@@ -43,25 +40,19 @@ set mouse=a
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
-Plug 'morhetz/gruvbox'
-Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
 filetype plugin indent on
 
-colorscheme gruvbox
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \ 'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
       \ 'right': [['lineinfo']],

@@ -1,6 +1,3 @@
-alias python=python3
-alias pip=pip3
-
 alias gcan="gc --amend --no-edit"
 alias gref="git reflog"
 
@@ -17,8 +14,6 @@ plugins=(git zsh-history-substring-search ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
-alias python="/usr/bin/python3.10"
-
 bindkey -v
 
 bindkey "^P" history-substring-search-up   
@@ -32,6 +27,15 @@ v() {
   fi
 }
 
-if [ -f ~/.Xmodmap ]; then
-    xmodmap ~/.Xmodmap
-fi
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export MAVEN_USER="daelynj"
+export MAVEN_TOKEN=""
+export NODE_AUTH_TOKEN=""
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias seam-admin='java -jar ~/.local/bin/saaslink-admin.jar'
