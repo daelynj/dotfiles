@@ -14,3 +14,4 @@ if [ ! -d ~/.config/i3/ ]; then
 fi
 
 ln -fs ~/dotfiles/i3/config ~/.config/i3
+ln -fs ~/dotfiles/helix ~/.config/helix
