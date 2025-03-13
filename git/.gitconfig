@@ -6,6 +6,7 @@ email = daelyn@seam.io
 [core]
 	editor = vim
   pager = less -+FX
+	excludesfile = /home/daelyn/.gitignore_global
 [pull]
 	rebase = true
 [push]
